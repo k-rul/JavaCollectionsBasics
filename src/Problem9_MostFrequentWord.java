@@ -4,13 +4,7 @@ public class Problem9_MostFrequentWord {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        String text = in.nextLine().toLowerCase();
-        String[] words = text.split("\\P{Alpha}+");
-        ArrayList<String> lWords = new ArrayList<>();
-
-        for (String word : words) {
-            lWords.add(word);
-        }
+        List<String> lWords = Arrays.asList(in.nextLine().toLowerCase().split("\\P{Alpha}+"));
 
         Map<String, Integer> countMap = new TreeMap<String, Integer>();
         Set<String> unique = new HashSet<String>(lWords);

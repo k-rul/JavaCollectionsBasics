@@ -6,8 +6,7 @@ public class Problem8_ExtractAllUniqueWords {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        String text = in.nextLine().toLowerCase();
-        String[] Words = text.split("\\P{Alpha}+");
+        String[] Words = in.nextLine().toLowerCase().split("\\P{Alpha}+");
 
         Set sWords = new TreeSet<>();
 
